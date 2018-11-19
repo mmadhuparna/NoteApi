@@ -22,7 +22,7 @@ mongoose.connect(url, {
 }).then(() => {
     console.log("Successfully connected to the database");    
 }).catch(err => {
-    console.log('Could not connect to the database. Exiting now...', err);
+    console.log('Could not connect to the database.');
     process.exit();
 });
 // view engine setup
@@ -30,7 +30,7 @@ mongoose.connect(url, {
 app.set('view engine', 'ejs');
 // define a simple route
 app.get('/', (req, res) => {
-    res.json({"message": "Welcome to EasyNotes application. Take notes quickly. Organize and keep track of all your notes."});
+    res.json({"message": "Welcome to EasyNotes application. Organize and keep track of all your notes."});
 });
 
 var routes = require('./app/routes/note.routes.js');
